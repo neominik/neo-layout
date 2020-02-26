@@ -5,7 +5,7 @@ global
 layoutstring:=""
 ;   KeyCode       Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
 ; Reihe 1
-EDS("029",0,"T__cflx","T__cron","T__turn","T__abdt","T__hook","T__bldt") ; circumflex
+EDS("056",0,"T__cflx","T__cron","T__turn","T__abdt","T__hook","T__bldt") ; circumflex
 EDS("002",0,"1","°","¹","ª"      ,"₁","¬") ; 1
 EDS("003",0,"2","§","²","º"      ,"₂","∨") ; 2
 EDS("004",0,"3","ℓ","³","№"      ,"₃","∧") ; 3
@@ -109,7 +109,7 @@ ED1S("02A","P__M2LD") ; Mod2L (ShiftL)
 ED1S("136","P__M2RD") ; Mod2R (ShiftR)
 ED1S("03A","P__M3LD") ; Mod3L (CapsLock)
 ED1S("02B","P__M3RD") ; Mod3R (#')
-ED1S("056","P__M4LD") ; Mod4L (<>)
+ED1S("029","P__M4LD") ; Mod4L (<>)
 ED1S("138","P__M4RD") ; Mod4R (AltGr)
 }
 
