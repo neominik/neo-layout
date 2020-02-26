@@ -1,13 +1,10 @@
 @echo off
 
 echo Setting default local path variables
-:: TortoiseSVN and its clever tool SubWCRev
-set Tsvnpath=C:\Program Files\TortoiseSVN\bin
-set  ahkpath=C:\Program Files (x86)\AutoHotkey
+set  ahkpath=C:\Program Files\AutoHotkey
 
 if exist _local_paths.bat call _local_paths.bat
 
-set SubWCRev=%Tsvnpath%\SubWCRev.exe
 set  Ahk2Exe=%ahkpath%\Compiler\Ahk2Exe.exe
 
 REM The path to the authohotkey directory in the local svn copy, MUST be "."
@@ -23,19 +20,7 @@ set     NEO2AppData=%APPDATA%\NEO2
 set       customahk=%NEO2AppData%\custom.ahk
 set  customahkbuild=%customahk%.buildtmp
 
-REM The path to the directory used for generating a consistent SVN version (revision number)
-set svnversiondir1=.
-
-echo Generating Version File
-"%SubWCRev%" "%svnversiondir1%" "%ahkrevtemplate1%" "%ahkrevoutput1%"
-"%SubWCRev%" "%svnversiondir1%" "%batrevtemplate1%" "%batrevoutput1%"
-call "%batrevoutput1%"
-
 set fnexe=%outdir%\neo20.exe
-"%SubWCRev%" "%svnversiondir1%" -nm
-if errorlevel 1 (
-  set fnexe=%outdir%\neo20-r%Revision%.exe
-)
 
 echo removing old version(s) of NEO AHK Exe file
 del "%outdir%\neo20-r*.exe" 2> nul
