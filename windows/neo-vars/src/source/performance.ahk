@@ -10,5 +10,5 @@ Process,Priority,,High
 #MaxHotkeysPerInterval 2000
 
 #usehook on
-Sendmode Event
+Sendmode Input
 SetKeyDelay,-1
