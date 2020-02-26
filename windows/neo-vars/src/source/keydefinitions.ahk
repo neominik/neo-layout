@@ -103,6 +103,9 @@ ED1("down"     ,"S__Down")
 ED1("left"     ,"S__Left")
 ED1("right"    ,"S__Rght")
 ED1("numpadenter","S__NEnt")
+ED1("lwin"     ,"S__LAlt")
+ED1("lalt"     ,"S__LWin")
+ED1("ralt"     ,"S__Apps")
 
 ; Die Modifier
 ED1S("02A","P__M2LD") ; Mod2L (ShiftL)
@@ -110,7 +113,7 @@ ED1S("136","P__M2RD") ; Mod2R (ShiftR)
 ED1S("03A","P__M3LD") ; Mod3L (CapsLock)
 ED1S("02B","P__M3RD") ; Mod3R (#')
 ED1S("029","P__M4LD") ; Mod4L (<>)
-ED1S("138","P__M4RD") ; Mod4R (AltGr)
+ED1S("15C","P__M4RD") ; Mod4R (AltGr), actually WinR on Apple Magic Keyboard 2
 }
 
 SetKeyPos(pos,char) {
@@ -367,7 +370,7 @@ Layout00000407() {
 ; Diverses
   RKEYS("F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12")
   RKEYS("space,enter,backspace")
-  RKEYS("del,ins,home,end,pgup,pgdn,up,down,left,right")
+  RKEYS("del,ins,home,end,pgup,pgdn,up,down,left,right,lwin,lalt,ralt")
 ; Diverses ohne *
   RKEYN("tab")
   RKEYN("esc")
@@ -378,7 +381,7 @@ Layout00000407() {
   RSC("03A","14") ; M3L
   RSC("02B","BF") ; M3R
   RSC("056","E2") ; M4L
-  RSC("138","A5") ; M4R
+  RSC("15C","5C") ; M4R
 
   /**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
    **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
